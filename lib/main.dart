@@ -1,7 +1,3 @@
-// COMPOSITION ROOT
-// Builds the concrete StaticWeatherRepository and wires it into
-// WeatherService, then into the screen. This is the only file that
-// knows StaticWeatherRepository exists.
 
 import 'package:flutter/material.dart';
 import 'application/weather_service.dart';

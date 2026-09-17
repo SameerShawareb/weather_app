@@ -1,8 +1,3 @@
-// PRESENTATION LAYER
-// Only this file knows what an Icon or a Color is. It asks
-// WeatherService for data and displays whatever comes back — it
-// never invents weather numbers itself.
-
 import 'package:flutter/material.dart';
 import '../application/weather_service.dart';
 import '../domain/weather.dart';
@@ -37,9 +32,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
     });
   }
 
-  // Presentation-only mapping: WeatherCondition (domain) -> IconData
-  // (Flutter). The domain layer deliberately doesn't know this
-  // mapping exists.
+
   IconData _iconFor(WeatherCondition condition) {
     switch (condition) {
       case WeatherCondition.sunny:
@@ -192,7 +185,7 @@ class _StatChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.25),
+        color: Colors.white.withValues(alpha: 0.25),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(

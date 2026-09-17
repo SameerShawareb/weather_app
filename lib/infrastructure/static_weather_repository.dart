@@ -1,15 +1,3 @@
-// INFRASTRUCTURE LAYER
-// The only file that currently "sources" weather data. It
-// implements the WeatherRepository contract with fixed numbers
-// instead of a real network call. The artificial delay mimics what
-// a real API request would feel like, so swapping this out later
-// won't change how loading states behave.
-//
-// To go live later: write a new class here (e.g.
-// OpenWeatherApiRepository) that also implements WeatherRepository
-// and does an actual HTTP call. Nothing in WeatherService or
-// WeatherScreen would need to change.
-
 import '../domain/weather.dart';
 import '../domain/weather_repository.dart';
 
