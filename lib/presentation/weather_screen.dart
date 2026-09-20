@@ -32,7 +32,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
     });
   }
 
-
+  // Presentation-only mapping: WeatherCondition (domain) -> IconData
+  // (Flutter). The domain layer deliberately doesn't know this
+  // mapping exists.
   IconData _iconFor(WeatherCondition condition) {
     switch (condition) {
       case WeatherCondition.sunny:
@@ -154,7 +156,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   ),
                 ),
                 const SizedBox(height: 12),
-                Expanded(
+                SizedBox(
+                  height: 150,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     itemCount: _forecast.length,
